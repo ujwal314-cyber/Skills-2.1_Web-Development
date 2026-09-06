@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+
+    <form action="post">
+        <div>
+            <label for="un">Username</label>
+            <input type="text" id="un" name="username" placeholder="Enter Your Username" required autofocus><!--if there is required then the form will not be submitted until it is filled-->
+            
+            <!--When there is autofocus it will be automatically typed in the box whenever you type after a reload-->
+        </div>
+
+        <div>
+            <label for="m">Male</label>
+            <input type="radio" id="m" name="gender" value="male">
+            
+            <label for="f">Female</label>
+            <input type="radio" id="f" name="gender" value="female">
+        </div>
+        <div>
+            <input type="checkbox" id="criteria1" name="criteria1" value="yes">
+            <label for="criteria1">1st Criteria</label>
+
+            <input type="checkbox" id="criteria2" name="criteria2" value="yes">
+            <label for="criteria2">2nd Criteria</label>
+
+            <input type="checkbox" id="criteria3" name="criteria3" value="yes">
+            <label for="criteria3">3rd Criteria</label>
+        </div>
+
+        <div>
+            <label for="comment">Enter your comment</label><br>
+            <textarea name="comment" id="comment" rows="10" cols="70"></textarea>
+        </div>
+
+        <div>
+            <label for="Fruits">Select the Fruits</label>
+            <select name="Fruits" id="Fruits">
+                <option value="Apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Coconut">Coconut</option>
+            </select>
+        </div>
+    </form>
+    
+</body>
+</html>

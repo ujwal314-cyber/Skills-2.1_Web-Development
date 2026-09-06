@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gap</title>
+    <style>
+        .container{
+            height: 80vh;
+            margin: 20px;
+            border: 2px solid darkred;
+            display: flex;
+        }
+
+        .item{
+            text-align: center;
+            align-content: center;
+            height: 40px;
+            width: 55px;
+            border: 2px solid;
+            background-color: aquamarine;
+            margin: 2px;
+            flex-grow: 2;/*When this is more than the values of the one applied to single items then each item will take equal space except the one which is given a different value*/
+        }
+
+        .g{
+            flex-grow: 1;/*If this is 0 then it will take the height and width mentioned if 1 then it will take(less space here as the entire one is 2) but as its value increases then its size increases but others remain of equal size*/
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item g"></div>
+        <div class="items1"></div>
+        <div class="item"></div>
+        <div class="item sh"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> -->
+        
+    </div>
+</body>
+</html>

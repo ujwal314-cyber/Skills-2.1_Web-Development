@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing ball</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 50vh;
+            border: 3px solid black;
+            background-color: lightgray;
+            position: relative;
+        }
+        
+        .ball{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+            left: 0;
+            bottom: 0;
+            animation: Bouncex 3s linear 0s infinite ,Bouncey 1s ease-out 0s infinite alternate;/*The time difference between x bounce and y bounce sould be different x should be more than y*/
+        }
+
+        
+
+        @keyframes Bouncex {
+            from{
+                
+            }
+            to{
+                left: 100%;
+            }
+        }
+
+        @keyframes Bouncey {
+            from{
+                bottom: 0;
+            }
+            to{
+                bottom: 60%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>

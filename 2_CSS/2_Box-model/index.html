@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0; 
+        }
+
+        .box{
+            background-color: blanchedalmond;
+        }
+
+        .box1{
+            padding: 10px;
+            margin:25px;
+            /*bg is also applied to padding but not to margin*/
+            border: 8px solid green;
+
+            height: 200px;/*When only height is mentioned then it adds 200px only to the main content box*/
+            box-sizing: border-box;/*But when i write this line then the height and width mentioned mentioned will be considered including padding and border and content box total willbe 200px excluding margin*/
+        }
+        .box2{
+            padding: 10px;
+            margin: 25px;
+            border: 8px solid blue;
+            height: 200px;
+            box-sizing: border-box;
+        }
+
+        /*Here both have margins 25 25 so the distance between the two should be 50px but the actual distance bw these is 25 this is margin collapse.
+        >If margins of 2 elements are overlapping then the max margin between the two is applied between the two.
+        >Here if the box1 had 35 and box2 had 25 margin then the margin between the two would be 35 the max of the two.*/
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        I am First div
+    </div>
+    <div class="box box2">
+        I am Second div
+    </div>
+</body>
+</html>

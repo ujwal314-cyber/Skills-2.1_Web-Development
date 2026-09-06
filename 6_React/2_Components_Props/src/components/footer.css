@@ -1,0 +1,24 @@
+.line{
+    margin: 0px 10px;
+    width: calc(100vw - 20px);
+    border-radius: 10px;
+    border: 2px solid rgba(91, 91, 91, 0.181);
+}
+
+.cont{
+    position: fixed;
+    bottom: 0px;
+}
+.footer{
+    /* background-color: rgba(91, 91, 91, 0.181); */
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+    width: calc(100vw - 40px);
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+}
+

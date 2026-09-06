@@ -1,0 +1,12 @@
+body {
+    background-color: rgba(28, 121, 118, 0.504);
+    color: rgb(50, 17, 73);
+}
+
+th{
+    border: 3px solid ;
+}
+
+td{
+    border: 2px solid black;
+}

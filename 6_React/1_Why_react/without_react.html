@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="count">0</div>
+    <div class="button"><button>Click me</button></div>
+
+    <script>
+        document.querySelector('.button').addEventListener("click",()=>{
+            let n=parseInt(document.querySelector('.count').textContent)
+            document.querySelector('.count').textContent=n+1
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        :root{
+            --color: aquamarine;
+            --seccolor: rgba(51, 246, 181, 0.201);
+        }/*Anything declared within the root are global variables*/
+
+        .nav ul{
+            list-style: none;
+            display: flex;
+            background-color: var(--color);
+        }
+
+        .nav ul li{
+            padding: 10px;
+        }
+
+        .d1{
+            background-color: var(--seccolor);
+        }
+
+        .d2{
+            --color: rgb(75, 187, 122);/*Here color has a local value so inside this block the global color value will be overiden by the local value for this block*/
+            background-color: var(--color);
+        }
+
+        .d3{
+            background-color: var(--notfound,lightblue);/*the second one is a fallback variable(You cant give another variable you can just give value ) so that if at all the first one is not found then the second one will be used*/
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="d1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ducimus numquam voluptatum cum nostrum explicabo suscipit earum assumenda ipsum, magni voluptates omnis! Adipisci assumenda ullam mollitia odit dolor molestias asperiores.
+    </div>
+    <br>
+    <div class="d2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti veritatis perferendis fuga tempora placeat optio eos consequuntur illum doloremque dolorum autem nam cum totam excepturi inventore voluptas, dignissimos incidunt eveniet?
+    </div>
+    <br>
+    <div class="d3">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat vero rerum eligendi sit pariatur? Necessitatibus, tempore quidem minus vero commodi enim deleniti unde! Quibusdam id exercitationem quo? Perferendis, corrupti nesciunt.
+    </div>
+</body>
+</html>

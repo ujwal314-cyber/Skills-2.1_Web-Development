@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            margin: 10px;
+            padding: 10px;
+            height: 15vh;
+            width: 70vw;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        .box1{
+            background-color: rgb(189, 192, 164);
+            
+        }
+
+        .box2{
+            background-color: aqua;
+            position: sticky;
+            height: 10vh;
+            top: 0;
+            right: 0;/*Its position will be same until you scroll and it reaches the top or bottom once it reaches it doesnt move up or down it will be fixed at the top or bottom but not applicable when moved right or left */
+        }
+
+        .box3{
+            background-color:bisque;
+        }
+
+        .box4{
+            background-color: brown;
+        }
+
+        .parent1{
+            margin: 10px;
+            padding: 10px;
+            height:150vh;
+            width: 150vw;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent1">
+
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+</html>

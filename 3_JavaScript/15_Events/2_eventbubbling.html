@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            padding: 34px;
+            background-color: aliceblue;
+        }
+        .childcontainer{
+            padding: 20px;
+            background-color: aquamarine;
+        }
+        .container{
+            padding: 20px;
+            background-color: brown;
+        }
+
+        .child, .childcontainer, .container{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                This is a child
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // document.querySelector(".child").addEventListener("click",()=>{
+        //     alert("Child was clicked")
+        // })
+        // document.querySelector(".childcontainer").addEventListener("click",()=>{
+        //     alert("Child Container was clicked")
+        // })
+        // document.querySelector(".container").addEventListener("click",()=>{
+        //     alert("Container was clicked")
+        // })
+
+        // //here as child is inside the child container and which is inturn inside container when the child is clicked the child container and container will also be automatically clicked and the other two events connected to the childcontainer and container will automatically be bubbled along with the child event
+
+        //to stop doing from child to its parent you must stop eventpropagation
+
+        document.querySelector(".child").addEventListener("click",(e)=>{
+            e.stopPropagation()
+            alert("Child was clicked")
+        })
+        document.querySelector(".childcontainer").addEventListener("click",()=>{
+            alert("Child Container was clicked")
+        })
+        document.querySelector(".container").addEventListener("click",()=>{
+            alert("Container was clicked")
+        })
+        //now when child is clicked only the child event will be executed 
+        //> But when you click on the child container then the event associated with the container will also be executed as the propagationo is not stopped inside the childcontainer
+
+
+    </script>
+</body>
+</html>

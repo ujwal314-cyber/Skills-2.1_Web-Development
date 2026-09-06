@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box {
+            width: 40vw;
+            height: 30vh;
+            border: 2px solid black;
+        }
+
+        /*Here in this the contents are overflowing to avoid this*/
+
+        /* One way is to */
+        /* .box{
+            overflow: scroll;
+        } */
+
+        /* another way is  */
+        .box1 {
+            overflow: auto;
+            /*Automatically adds scroll if the content is overflowing otherwise not*/
+            /*Problem with only scroll is that even if the content is not overflowing scroll bars will appear*/
+        }
+
+        .box2{
+            overflow: auto;
+            
+            white-space: nowrap;/*Content will be displayed in one line only*/
+
+            /* text-overflow:ellipsis;Adds three dots at last */
+
+            /* overflow: clip; is this is added then you can never scroll even programatically
+            > Even hidden does the same thing*/
+        }
+
+        .box3{
+            /*overflow in x and y can be controlled separately*/
+
+            /* overflow-x: hidden;
+            overflow-y: auto; 
+            this one can be written in one line as*/
+
+            overflow: hidden auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores est autem quidem totam nisi qui
+        doloribus assumenda fugit, rerum eius soluta tempore reiciendis! Vel, quasi? Minima tenetur perspiciatis,
+        voluptatum, iste sed commodi qui illum labore pariatur beatae provident ex? Fuga officia laboriosam voluptatem
+        impedit rem, aliquam ipsum, atque ea facilis modi dolor pariatur accusantium quo sunt.</div>
+    <br>
+    <div class="box box2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem autem distinctio placeat eaque
+        soluta odit. Nulla reprehenderit, esse error in cupiditate placeat quasi at debitis ut assumenda ea eos
+        exercitationem. Laborum voluptatibus labore delectus, explicabo ut odio itaque reprehenderit ipsum sint earum
+        quaerat quo molestiae! Magnam, ducimus magni? Suscipit officia aut excepturi distinctio perferendis nihil?
+        Magni.</div>
+
+    <br>
+    <div class="box box3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem autem distinctio placeat eaque
+        soluta odit. Nulla reprehenderit, esse error in cupiditate placeat quasi at debitis ut assumenda ea eos
+        exercitationem. Laborum voluptatibus labore delectus, explicabo ut odio itaque reprehenderit ipsum sint earum
+        quaerat quo molestiae! Magnam, ducimus magni? Suscipit officia aut excepturi distinctio perferendis nihil?
+        Magni.</div>
+</body>
+
+</html>

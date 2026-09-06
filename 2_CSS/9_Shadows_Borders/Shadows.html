@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadows</title>
+    <style>
+        .box-shadow{
+            border: 3px solid brown;
+            padding: 30px;
+            box-shadow: 5px 5px 10px 8px grey;
+            outline: 5px solid black;
+            outline-offset: 2px;
+            
+        }
+
+        .text-shadow{
+            text-shadow: 1px 3px 7px rgb(188, 52, 90);
+            padding: 10px;
+            border: 3px solid rgb(121, 0, 202);
+            outline: 5px solid black;/*Outline is different than the border outline appears outside border.
+            > Outline is not a part of the box model.
+            > Outline is applied outside the border
+            > Outline offset is distance between the border and outline.
+            outline cannot be curved directly but it takes the shape of the border when it is curved*/
+            border-radius: 7px;
+            outline-offset: 5px;
+            /*Borders can have varying width on different sides but outline has a uniform width*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box-shadow">This is a box</div>
+    <br>
+    <br>
+    <div class="text-shadow">Lorem, ipsum dolor sit amet consectetur adipisicing elit. In veniam, numquam tenetur quibusdam, earum et sed voluptas adipisci ab ipsa repellendus atque illum.</div>
+
+</body>
+</html>

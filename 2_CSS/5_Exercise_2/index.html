@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+    <style>
+        
+        div>p{
+            background-color: blue;
+            color: white;
+        }
+        body>:first-child>:first-child{
+            background-color: yellow;
+            color: red;
+        }/*not(:first-child) is the opposite of the first-child refers to all other childs other than the first one*/
+
+        /* div>p:nth-child(2){
+            background-color: yellow;
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse excepturi corporis similique? Consequuntur assumenda, repellendus ipsa sed illo exercitationem magnam aperiam non odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quaerat.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, placeat!</p>
+    </div>
+    
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse excepturi corporis similique? Consequuntur assumenda, repellendus ipsa sed illo exercitationem magnam aperiam non odio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quaerat.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore, placeat!</p>
+    </div>
+    
+</body>
+</html>

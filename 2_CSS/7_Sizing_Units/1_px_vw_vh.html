@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing Units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #d1{
+            border: 2px solid black;
+            /* width: 2048px; If you fix in pixels the problem you will face is that is youe set px is larger than the users screen px then the user has to scroll to see the end contents */
+            box-sizing: border-box;
+            background-color: aquamarine;
+        }
+        
+        #d2{
+            border: 2px solid black;
+            width: 100vw;/*vw will adjust itself to the users screen (view port) to fit it perfectly*/
+            box-sizing: border-box;
+            background-color: aquamarine;
+        }
+
+        #p1{
+            border: 2px solid black;
+            width: 80vw;/*80 means it will cover only 80% of screen you can give more than 100 also but then scroll bar will appear*/
+            box-sizing: border-box;
+            background-color: rgb(209, 47, 221);
+        }
+        #p2{
+            border: 2px solid black;
+            width: 80vw;/*80 means it will cover only 80% of screen you can give more than 100 also but then scroll bar will appear*/
+            margin: 20px auto;/*Whem this is applied then it will apply margins automatically on both sides equally and the element will still occupy 80% of viewport
+            > Here 20px is for top bottom anuto is for left nd right*/
+            box-sizing: border-box;
+            background-color: rgb(209, 47, 221);
+        }/*The above applicable only to block element and not to a inline element like span etc you cant apply width , margin auto etc*/
+        
+        #d3{
+            border: 2px solid black;
+            width: 80vw;
+            height: 50vh;
+            margin: 20px auto;
+            box-sizing: border-box;
+            background-color: rgb(209, 47, 221);
+
+        }
+        </style>
+
+</head>
+<body>
+    <div id="d1">This is a box</div>
+    <br>
+    <div id="d2">
+        This is for vw
+    </div>
+    <br>
+    
+    <p id="p1">This an example</p>
+    <br>
+    <p id="p2">This is vw centre allign</p>
+    <br>
+
+    <div id="d3">vw - viewport width and vh - viewport height</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Post Request</title>
+</head>
+<body>
+    <script>
+        async function testPost() {
+            let a=await fetch('/',{method:'POST'})
+            let b=await a.text()
+            console.log(b);
+        }
+        testPost()
+    </script>
+</body>
+</html>
+
+
+
+<!-- The **HTML is sending the POST request**, not receiving it.
+
+Flow:
+
+1. Browser loads `test_page.html`.
+2. `fetch('/', { method: 'POST' })` sends a POST request to the server.
+3. Express receives it in:
+
+```js
+app.post('/', (req, res) => {
+    res.send("Hey this is a post request")
+})
+```
+
+4. The server sends back `"Hey this is a post request"`.
+5. The HTML receives the response:
+
+```js
+let a = await fetch('/', { method: 'POST' })
+let b = await a.text()
+console.log(b)
+```
+
+So:
+
+```text
+HTML (fetch)  ---> POST Request ---> Express Server
+
+HTML (fetch)  <--- Response ------- Express Server
+```
+
+The POST request is **created by the HTML/JavaScript**, and `main.js` **handles it and sends a response back**. -->
+
+
+<!-- // FULL FLOW (FETCH → EXPRESS → RESPONSE → BACK)
+//
+// 1. User opens test_page.html in browser
+//
+// 2. Browser runs JS:
+//    fetch('/', { method: 'POST' })
+//
+// 3. Browser sends HTTP POST request to server at '/'
+//
+// 4. Express server receives request:
+//    app.post('/', (req, res) => { ... })
+//
+// 5. Inside server block:
+//    - onsole.log("Request recieved successfully");  → prints in TERMINAL
+//    - res.send("Post request recieved successfully") → sends response back
+//    - console.log("Responded for the post request")  → prints in TERMINAL
+//
+// 6. Browser receives response from server
+//
+// 7. JS reads response:
+//    let b = await a.text()
+//
+// 8. Browser logs output:
+//    console.log(b)
+//    → "Hey this is a post request" -->

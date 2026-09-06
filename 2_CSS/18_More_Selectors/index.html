@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors</title>
+    <style>
+        /* .box:first-child{
+            background-color: aquamarine;
+        }
+            > If the box is the first child of its parent then the property is applied */
+
+        /* .box:first-line{
+            background-color: aqua;
+        }
+            > Will be applied to all the first line of each box */
+
+        /* .outer *{
+            background-color: antiquewhite;
+            margin: 20px;
+        }
+            > This will be applied to all the elements inside the outer */
+
+        /* p, a, .box, [attribute="one"]{
+            margin-top: 45px;
+            padding-top: 30px;
+            background-color: antiquewhite;
+        }
+            > you can select more tha one element at once */
+
+        /* .box:nth-child(odd){
+            background-color:bisque;
+        }
+            > applied only to odd childs*/
+
+        /* .box:nth-last-child(2){
+            background-color: bisque;
+        }
+            > This will consider the child from last */
+        ::selection{
+            background-color: black;
+            color: bisque;
+        }/*This will be applied when any element is selected*/
+
+        .box::first-letter{
+            font-size: 30px;
+            color: peru;
+        }
+
+        input::placeholder{
+            color: rgba(0, 0, 255, 0.278);
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div attribute="one" class="box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, quae dicta amet eveniet esse consectetur incidunt velit recusandae, voluptate eius quo nihil placeat?</div>
+        <div class="box">2nd one</div>
+        <div class="box">3rd one</div>
+        <div>
+            <p>This is a paragraph</p>
+        </div>
+
+        <div class="ip">
+            <input type="text" placeholder="Enter your name">
+        </div>
+
+    </div>
+</body>
+</html>

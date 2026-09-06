@@ -1,0 +1,21 @@
+.red{
+    color: red;
+}
+
+.bg-yellow{ /* classes are accessed using '.' and id using '#' .and # are selectors in css*/
+    background-color: yellow;
+}
+
+/* #2div{
+    background-color: aqua;
+    color: blueviolet;
+} ids having numbers in their beginning cannot be styled here */
+
+#sdiv{
+    background-color: aqua;
+    color: blueviolet;
+}
+
+#odiv{
+    background-color: beige;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area</title>
+    <style>
+        .container{
+            border: 3px solid brown;
+            padding: 10px;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                                 "article side side"
+                                 "footer footer footer";
+        }
+
+        .item{
+            border: 2px solid chocolate;
+            height: 50px;
+        }
+
+        .i1{
+            grid-area: nav;
+            background-color: rgb(120, 105, 85);
+        }
+
+        .i2{
+            grid-area: article;
+            background-color: aquamarine;
+        }
+
+        .i3{
+            grid-area: side;
+            background-color: blueviolet;
+        }
+
+        .i4{
+            grid-area: footer;
+            background-color: rgb(65, 129, 186);
+        }
+
+        .i5{
+            grid-area: nav;
+            background-color: rgba(224, 6, 6, 0.238);
+        }/*overlaps on 1*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item i1">1</div>
+        <div class="item i2">2</div>
+        <div class="item i3">3</div>
+        <div class="item i4">4</div>
+        <div class="item i5">5</div>
+    </div>
+</body>
+</html>

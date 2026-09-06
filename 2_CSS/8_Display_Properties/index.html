@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            background-color: aqua;
+            border: 3px solid brown;
+            margin: 30px;
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+            /* display: inline; if you mention only inline then you cannot apply width and when you apply margin and padding they will not be applied on the top so inline block is used*/
+            display: inline-block;
+        }
+
+        .box1{
+            /* display: none; When you do this the box will dissapear and the space occupied by it will also dissapear */
+            visibility: hidden;/*When you do this the box will dissapear but its space will remain*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        This is a box
+    </div>
+    <div class="box">
+        This is another
+    </div>
+    <span>
+        This is a span
+    </span>
+</body>
+</html>

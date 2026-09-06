@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em and rem</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        html{
+            font-size: 10px;
+        }/*By default the root font size is 16px but here i changed the root to 10 so the below em examples will have 2em as 20 and 2em of 2em as 40px
+        > The root font size is 10px*/
+        
+        .container{
+            border: 2px solid black;
+            width: 80vw;
+            font-size: 2em;
+            box-sizing: border-box;
+            margin:20px auto;
+            background-color: aqua;
+        }
+        .container #p1{
+            font-size: 2em;
+        }
+        /*em means that whatever it inherits make that many times of it 
+        > Here the default font size is 16px which the .container inherits so 2em of that means 32px
+        > And as p inherits from container 2em of that means 2 times os 32px so 64px*/
+
+        .container #p2{
+            font-size: 1.5rem;/*rem means that many times of the root property here root font size is 10 1.5 times of 10 is 15px */
+        }
+        </style>
+
+</head>
+<body>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    <div class="container">
+        <p id="p1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus tempore omnis expedita illum eligendi incidunt blanditiis placeat cumque alias culpa! Fugit, molestias. Officia, provident ea pariatur corrupti suscipit aperiam. Assumenda eligendi placeat blanditiis libero aut animi deleniti voluptatibus molestiae eius, doloribus veniam doloremque maiores quam.
+        </p>
+    </div>
+    
+    <div class="container">
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, fugit illum? Asperiores exercitationem minus est vitae similique, adipisci dolore voluptatum sequi a cumque, eveniet culpa porro consequuntur! Excepturi incidunt tempora cupiditate autem, molestiae at?</p>
+
+    </div>
+</body>
+</html>

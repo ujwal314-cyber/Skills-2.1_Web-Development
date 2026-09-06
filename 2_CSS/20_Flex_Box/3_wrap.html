@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap</title>
+    <style>
+        .container{
+            height: 80vh;
+            margin: 20px;
+            border: 2px solid darkred;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+            flex-wrap: wrap;/*In a flex box it doesnt go to a newline when the content overflows first it decreases the width or height whichever direction in which it is after decresing also if the content doesnt fit inside the container then it overflows but when wrap is given then the content automatically comes to the newline when it cant fit within the width of the container*/
+
+            /* when you apply wrap and the align items is written then only the middle lines will be in the centre of the cross axis and other items will be spaced evenly from the middle ones
+            
+            but if you want all the lines to be in the center then align-content is used
+            
+            > There is wrap reverse where the content will be wrapped in reverse direction
+            
+            > nowrap is the default*/
+
+            flex-flow: column wrap-reverse;/*setting flex direction and wrapping at once*/
+        }
+
+        .item{
+            text-align: center;
+            align-content: center;
+            height: 40px;
+            width: 40px;
+            border: 2px solid;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>

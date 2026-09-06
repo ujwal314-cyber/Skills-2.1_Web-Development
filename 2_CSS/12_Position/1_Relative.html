@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            height: 25vh;
+            width: 25vw;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        /*By default the position property will be static which means that you cant alter any position property of elements*/
+
+        .box1{
+            background-color: aquamarine;
+        }
+        .box2{
+            background-color: cyan;
+            position: relative;/*When you do relative you can change the position of the box*/
+            top: 56px;
+            left: 23px;
+            /*Now this element will be top on the third element but if you want the other to be on top then you should set the z-index of the third more than 0 but before that you should set its position also as relative*/
+        }
+        .box3{
+            background-color: orange;
+            position: relative;
+            /*The box comes above 2nd without setting z-index as the one below is given more precedence than above so once you set it relative than it automatically comes above*/
+        }
+        .box4{
+            background-color: lightgray;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+</body>
+</html>

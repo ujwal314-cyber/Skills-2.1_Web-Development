@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Specificity</h1>
+    <h2>Position and order of appearence</h2>
+    <p>If there are many selectors belonging to same group then the one at the last will be considered</p>
+
+    <h2>Specificity</h2>
+    <p>The one which specifies an element more precisely will be considered</p>
+    <p>Like Inline selectors are the most specific(so if at all they are there then no other selectors are checked) id is more specific than class or attribute selector and class is more specific than element selector which is more specific than universal selectors</p>
+    <p>Inline > Id > Class or attribute> Element > Universal</p>
+
+    <h2>Origin</h2>
+    <p>If you have not used any style sheet then the styling will happen from the browesr's default style sheet which user agent stylesheet if you have applied any then it will be used</p>
+
+    <h2>Important</h2>
+    <p>The < color: "blue" !important > this important zpecificity will override inline styles also</p>
+</body>
+</html>

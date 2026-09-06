@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vmin and vmax</title>
+    <style>
+        div{
+            border: 2px solid black;
+            background-color: bisque;
+            box-sizing: border-box;
+            width: 100vmin;/*in laptop vmin will be the height therfore the width will be the 100% of the screen h hence it is same as 100vh here*/
+        }
+        /*vmax also works in the same way*/
+    </style>
+</head>
+<body>
+    <div>
+        In mobile vmin width will be minimum and height will be max(height > width) therefore for mobile screen vmin will be the width but in computer screen its the opposite(width > height) therefore here the height will be vmin
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container{
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            border: 3px solid brown;
+        }
+        
+        .box{
+            margin: 10px;
+            border: 3px solid;
+            background-color: aquamarine;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* transform: rotate(45deg); */
+
+            /* transform: rotate(0.25turn); 1 turn = 360 deg so 0.25 turn is 90 deg*/
+
+            /* transform: rotateX(45deg); */
+
+            /* transform: rotateZ(30deg); */
+
+            /* Normally the rotation happens arount 50%,50% of the origin which means centre of the box */
+
+            transform-origin: 0% 0%;
+            transform: rotate(20deg);/*now as the origin is set at 0 and 0 the box rotates around the start of the box*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>

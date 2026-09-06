@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(168, 167, 167, 0.477);
+        }
+
+        .card{
+            margin: 10px auto;
+            background-color: white;
+            width: 314px;
+            height: 460px;
+            border: 2px solid rgba(128, 128, 128, 0.486);
+            border-radius: 15px;
+        }
+        
+        .image{
+            padding: 7px;
+        }
+        
+        .image img{
+            border-radius: 15px;
+        }
+
+        .buttons{
+            padding: 5px 20px;/*padding: top_and_bottom left_and_right can also be written as 
+            > paddinkg: top right bottom left*/
+        }
+        
+        .buttons button{
+            font-size: 12px;
+            margin: 0 3px;
+            border-radius: 18px;
+            padding: 6px 14px;
+            color: rgba(105, 105, 105, 0.516);
+            border: 1px solid rgba(158, 157, 157, 0.401);
+            background-color: rgba(186, 186, 186, 0.126);
+            cursor: pointer;/*If cursor pointer is applied universally then the cursor will be pointer everywhere
+
+            >So it should be applied only inside the button for which the cursor should turn as a pointer*/
+        }
+
+        .buttons button:hover{
+            color: rgb(255, 248, 248);
+            background-color: rgba(105, 105, 105, 0.516);
+        }
+
+        .content{
+            margin-top: 20px;
+            color: rgb(51, 51, 51);
+            padding: 0 20px;
+        }
+        
+        .content p{
+            margin-top: 10px;
+            color: rgb(110, 110, 110);
+        }
+        .read{
+            text-align: center;
+            margin: 30px;
+        }
+
+        .read button{
+            border: none;
+            font-size: 12px;
+            border-radius: 18px;
+            padding: 10px 15px;
+            color: rgb(40, 143, 226);
+            background-color: rgba(40, 142, 226, 0.2);
+            cursor: pointer;
+        }
+
+        .read button:hover{/*There should be no space between the button :hover like this or button: hover like this then it wouldnt be implemented*/
+            color: rgb(255, 255, 255);
+            background-color: rgb(79, 152, 212);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="image">
+            <img width="300" height="220" src="lake.jpeg" alt="">
+        </div>
+        <div class="buttons">
+            <button>Nature</button>
+            <button>Lake</button>
+        </div>
+
+        <div class="content">
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam sed eos laborum?</p>
+        </div>
+        <div class="read">
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+</html>

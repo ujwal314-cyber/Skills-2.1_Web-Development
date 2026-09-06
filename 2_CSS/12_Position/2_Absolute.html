@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute</title>
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            margin: 10px;
+            padding: 10px;
+            height: 15vh;
+            width: 70vw;
+            border: 2px solid black;
+            margin: 5px;
+        }
+
+        .box1{
+            background-color: rgb(189, 192, 164);
+            
+        }
+
+        .box2{
+            background-color: aqua;
+            border: 2px solid black;
+            position: absolute;/*When absolute is applied then the applied position will be applied in relation to the nearest positioned parent(whose position is not static) so here for box1 inside parent1 the nearest positioned one is the webpage(html) as parent1,body are static so therefore the position is applied in relative with the webpage
+            
+            > but for box1 inside parent2 the nearest positioned one is parent2 so all its position is applied in relative with the parent2
+            
+            > There are some other cases where even if the parent is not set to absolute/sticky/relative/fixed still it appears positioned when properties like transform filter or perspective are used these can make the parent positioned and the element will be set relative to the parent*/
+            top: 0px;
+            left: 25px;
+        }
+
+        .box3{
+            background-color:bisque;
+        }
+
+        .box4{
+            background-color: brown;
+        }
+
+        .parent1{
+            margin: 10px;
+            padding: 10px;
+            height:90vh;
+            width: 90vw;
+            border: 5px solid red;
+        }
+        
+        .parent2{
+            margin: 10px;
+            padding: 10px;
+            position: absolute;
+            height:90vh;
+            width: 90vw;
+            border: 5px solid rgb(202, 12, 97);
+            
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="parent1">
+
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+    <br>
+    <br>
+    <div class="parent2">
+    
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+
+</body>
+</html>

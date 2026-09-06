@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear</title>
+    <style>
+        
+        img{
+            float:left;
+        }
+
+        .cards{
+            border: 2px solid;
+            display: flow-root;
+        }
+        
+        .card{
+            border: 3px solid red;
+        }
+
+        .card:nth-child(4){
+            background-color: aquamarine;
+            clear: left;/*This will tell that do not allow any element to float on the left but it will allow to float on the right
+            
+            > it can be made to clear: both were it wont allow to float on both the sides*/
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+
+        <img height="200px" src="https://thumbs.dreamstime.com/b/ripe-strawberry-plant-9284614.jpg" alt="image">
+
+        <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae modi libero nemo quae ut distinctio a iure corporis! Delectus, nam? Numquam deleniti sit doloribus ullam vel consectetur, accusantium eum perferendis.</div>
+
+        <div class="card">Card 1</div>
+
+        <div class="card">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut provident dolorem aliquam aut quasi odit iure ipsa, sapiente tempore nisi in ratione. Hic tempora modi magnam mollitia obcaecati possimus amet cum cumque quis voluptates? Nobis ex impedit ipsam minima fugiat, eaque porro dignissimos voluptate eveniet voluptates iusto corrupti, commodi, sapiente repellendus unde minus? Architecto placeat ipsa, est recusandae beatae qui accusantium praesentium. Ea perferendis cupiditate corporis, nam tenetur vero, ducimus quisquam, culpa natus aliquid expedita laudantium. Dignissimos, tenetur architecto officia est quidem accusamus tempora praesentium libero nostrum esse numquam natus nulla eos. Quisquam quis sint rerum? Laborum eveniet consequuntur eaque ipsa labore obcaecati commodi. Sit obcaecati rem eligendi nemo dignissimos nesciunt sint, architecto aliquid quam reiciendis repudiandae eius amet illum sapiente cupiditate. Iusto eius maiores dolore! Officia architecto repudiandae facilis officiis minus asperiores porro natus, provident, praesentium corrupti suscipit excepturi velit animi nulla voluptatem aspernatur blanditiis nostrum cumque illum? Quae, dolor sunt aspernatur incidunt ipsa inventore officia magni porro dolore delectus esse, quasi nam illo harum quis. Consequuntur expedita suscipit nostrum distinctio culpa, maiores reiciendis nihil enim assumenda incidunt? Unde a sunt temporibus! Nihil quod corrupti quasi itaque debitis. Quidem et reprehenderit magni facere amet voluptatum blanditiis natus assumenda similique!</div>
+
+        <div class="card">Card 3</div>
+
+    </div>
+</body>
+</html>

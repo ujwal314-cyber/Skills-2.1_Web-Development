@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+
+        @media screen and (max-width:500px){
+            body{
+                background-color: antiquewhite;/*So here as soon as the width goes below 500px the background color changes to antiquewhite (here)
+                > If min width was given then it would be applied after the screen goes beyond 500px*/
+            }
+        }
+
+        .boxes{
+            display: flex;
+        }
+        
+        .box{
+            background-color: aqua;
+            height: 233px;
+            width: 233px;
+            margin: 10px;
+            padding: 5px;
+        }
+
+        @media screen and (orientation: portrait){/*Gets applied when the screen is in portrait*/
+            .boxes{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Hello there
+    </div>
+    <br>
+
+    <div class="boxes">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+</html>

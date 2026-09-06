@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css</title>
+    <style>/* One way of adding css to html file is using style tag */
+
+        /* element selector */
+        
+        div{ /* Herer div is the selector */
+            color: red;/*This is the declaration*/
+
+            /*colour is the key / property and red is the value*/
+            
+            /*this will change the colours of all the divs in the page*/
+        }
+        /* you can consider multiple selectors at a time*/
+
+        /* Class selector */
+        .green{
+            color: brown;
+            background-color: rgba(61, 182, 126, 0.937);
+        }
+
+        /* ID selector*/
+        #para{
+            color: white;
+            background-color: black;
+        }
+        
+        /* Child Selector */
+        div > p{
+            background-color: beige;
+        }
+        div>article>p{
+            color:blue;
+        }
+        
+        /* Descendent Selector */
+        div p{
+            color: rgb(199, 27, 110);
+            background-color: rgb(241, 80, 12);
+        }
+
+        /* Universal Selector */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Pseudo Selector */
+        a:visited{
+            color: yellow;
+        } /*Once you click on the link and visit the website the link color changes to yellow*/
+        a:link{
+            color:green;
+        }/*If the lin not yet visited then it remains green*/
+        a:hover{
+            background-color: aquamarine;
+        }/*When you move the cursor on to the link*/
+        a:active{
+            background-color: crimson;
+        }/*When you click on the link the bg turns crimpson
+        if at all this was above the hover then it would not be applied if clicked and there are some other elements also like if the decendent selector was below a child selector and both refered to the same element then the below one would be given preference
+        => Therefore the below one is given preference*/
+        p:first-child{
+            background-color: aqua;
+        }
+
+        /*Attribute selector*/
+        [div-x=a]{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        This is css
+        hello
+    </div>
+    <div class="green">
+        This is the second one
+    </div>
+
+    <span class="green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odit quaerat repellat quod asperiores laudantium repudiandae atque assumenda ipsam, mollitia ad, odio sequi?</span>
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, et? Cupiditate quam atque repudiandae. Ad tempore reiciendis, similique suscipit blanditiis quo asperiores sit aliquam at.</p>
+
+    <div>
+        <p>This is a para under div</p>
+
+        <article>
+            <p>this is under article</p>
+        </article>
+    </div>
+
+    <div>
+        <span>
+            <p>Though this is inside sapn it is a descendent of div</p>
+        </span>
+    </div>
+
+    <a href="https://google.com">Go to google</a>
+    <br>
+    <a href="khbhkbjhb">Something</a>
+    <div>
+        <div>
+            <p>I am first</p>
+            <p>I am second</p>
+            <p>I am third</p>
+        </div>
+    </div>
+    <div div-x="a">This belongs to attribute</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <style>
+        /* nav ul or nav ul li{
+            list-style:armenian; you can change the marker with this
+        } */
+
+        nav ul li{
+            background-color: aquamarine;/*This is applied only to the items not marker but if you want to include markers also then do*/
+
+            /* list-style-position: inside; */
+            border: 2px solid ;/*If the above line wasnt there then the border also would be applied only to the the items*/
+
+            /* list-style:disc inside url("Screenshot 2026-03-23 200852.png"); though disc is there first url will be considered as it is at last*/
+            /*All can be included in one line itself here the image in the url will be used as the marker*/
+            /* list-style-image: url("Screenshot\ 2026-03-23\ 200852.png"); */
+
+            /* list-style: inside "🤣"; or */
+            list-style-type: "💕";
+            list-style-position: inside;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li><!--By default the display of a list will be list-item where each element will have a marker and a item but for a navigation bar you do not want it like that so you must change-->
+            <li>About</li>
+            <li>User</li>
+        </ul>
+    </nav>
+</body>
+</html>

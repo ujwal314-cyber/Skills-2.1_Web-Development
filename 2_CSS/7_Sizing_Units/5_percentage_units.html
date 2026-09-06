@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>% units</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .outer{
+            background-color: antiquewhite;
+            width: 80vw;
+            height: 80vh;
+            box-sizing: border-box;
+            margin: auto;
+            border: 3px solid black;
+        }
+
+        .outer div{
+            border: solid greenyellow;
+            width: 50%;/*Its width will be 50% of the entire outer one*/
+        }
+
+        .outer >div>p{
+            border: solid rebeccapurple;
+            width: 50%;/*It will be 50% of the div which is in fact the 50% of the outer one
+            >Therefore the p will be 25% of the outer one*/
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima sapiente aperiam ducimus rerum placeat quod repudiandae deserunt facilis tenetur voluptatum, exercitationem nobis nisi, necessitatibus mollitia? Ut assumenda, a voluptates optio commodi quo velit esse cupiditate odit. Corporis in a mollitia adipisci sequi? Officia, minima modi!
+
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore iure doloremque ullam ex sit iusto, cumque laboriosam deleniti suscipit dignissimos, quaerat ducimus?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

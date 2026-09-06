@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit</title>
+    <style>
+        .container{
+            width: 560px;
+            height: 500px;
+            border: 2px solid;
+            background-color: aquamarine;
+        }
+        img{
+            height: 466px;
+            width: 466px;
+            /* object-fit: fill; This is the default one  */
+            
+            object-fit: contain;
+            /*This will maintains its aspect ratio satisfiying only one measure either height or width*/
+
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA-7UIYLcEK1mAwct1XgW8aSMnvm3ZEQBYgQ&s" alt="">
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+
+        :root {
+            --pc: rgb(178, 178, 178);
+            --sc: rgba(211, 211, 211, 0.826);
+            --navtext: rgba(62, 62, 62, 0.786);
+            --text: black;
+            --hover: black;
+            --border: gray;
+
+        }
+
+        /* :root {
+            --pc: rgb(24, 24, 24);
+            --sc: rgba(63, 63, 63, 0.826);
+            --nav: rgba(230, 230, 230, 0.786);
+            --text: white;
+            --hover: black;
+            --border: rgb(184, 182, 182);
+
+        } */
+
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text);
+            /* overflow: auto;  
+            > Having overflow auto in universal selector makes the elements not to stick to the screen even if position sticky is applied*/
+        }
+
+        body{
+            background-color: var(--pc);
+        }
+
+        header{
+            position: sticky;
+            top: 0;
+        }
+        
+        nav{
+            background-color: var(--sc);
+            height: 40px;
+        }
+        
+        .container{
+            background-color: var(--sc);
+            margin: 3vh 5vw;
+            padding:2vh 5vw;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .box1, .box2{
+            display: inline-block;
+            margin: 5vh 5vw;
+            width: 26vw;
+            height: 70vh;
+            background-color:var(--pc);
+            border-radius: 10px;
+        }
+
+        footer{
+            height: 70px;
+            background-color: var(--sc);
+        }
+
+        .textbox{
+            text-align: center;
+            margin: 10vh 10vw;
+            padding: 10vh 10vw;
+            border-radius: 100px;
+            background-color: var(--sc);
+            font-size: x-large;
+            border: 2px solid var(--border);
+        }
+
+        .bottom{
+            position: fixed;
+            height: 40px;
+            width: 40px;
+            background-color: orange;
+            bottom: 1vw;
+            right: 1vw;
+            border-radius: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            Home
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="box1"></div>
+            <div class="box2"></div>
+        </div>
+
+        <div class="textbox">Welcome to Sigma Web Development Course</div>
+
+        <div class="bottom"></div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

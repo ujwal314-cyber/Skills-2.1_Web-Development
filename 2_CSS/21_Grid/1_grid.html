@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            border: 3px solid brown;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: [pehla] 50px [doosra] 60px [t]  100px;/*here you are telling there will be three columns in the grid one of 50px 2nd of 60px and other of 100px*/
+
+            /*They can be named as you wish*/
+
+            /*If you set even one parameter also row or column then the other will automatically set the other equally*/
+
+            grid-template-rows: 100px 100px 100px;/*Creates 3 rows of 100px*/
+        }
+
+        .item{
+            height: 50px;
+            width: 50px;
+            border: 2px solid cadetblue;
+        }
+
+        .i6{
+            grid-row: 1/2;/*It should occupy row 1 to 2 */
+            /* or you can write
+            grid-row-start: 1;
+            grid-row-end: 2;  both mean the same*/
+            grid-column: 2/3;/*It should occupy column 2 to 3*/
+        }
+
+        .i9{
+            grid-row: 2;
+            grid-column: pehla;/*as both same 8 and 9 have same coordinates they overlap*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item i6">6</div>
+        <div class="item">7</div>
+        <div class="item i9">8</div>
+        <div class="item i9">9</div>
+    </div>
+</body>
+</html>

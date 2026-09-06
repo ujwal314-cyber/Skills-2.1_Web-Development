@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic website</title>
+    <style>
+        :root {
+            --pc: rgb(178, 178, 178);
+            --sc: rgba(211, 211, 211, 0.826);
+            --nav: rgba(62, 62, 62, 0.786);
+            --text: black;
+            --hover: black;
+
+        }
+
+        /* :root {
+            --pc: rgb(24, 24, 24);
+            --sc: rgba(63, 63, 63, 0.826);
+            --nav: rgba(230, 230, 230, 0.786);
+            --text: white;
+            --hover: black;
+
+        } */
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--pc);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 40px;
+            padding: 10px;
+            background-color: var(--sc);
+            border-radius: 15px;
+        }
+
+        nav ul a {
+            background-color: none;
+            color: var(--nav);
+            border: none;
+            padding: 0px 20px;
+            cursor: pointer;
+            text-decoration: none;/*Removes that below line*/
+        }
+
+        a:hover {
+            color: var(--hover);
+        }
+
+        .content{
+            border-radius: 10px;
+            height: 70vh;
+            color: var(--text);
+            background-color: var(--sc);
+            margin: 40px;
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="https://google.com">Home</a></li>
+            <li><a>Contact</a></li>
+            <li><a>About</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur ea itaque, in exercitationem omnis architecto aliquam, libero nemo minus animi optio distinctio pariatur suscipit recusandae quae autem vero ut ducimus!
+    </div>
+</body>
+
+</html>

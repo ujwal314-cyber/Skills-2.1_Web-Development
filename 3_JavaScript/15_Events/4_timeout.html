@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child {
+            padding: 34px;
+            background-color: aliceblue;
+        }
+
+        .childcontainer {
+            padding: 20px;
+            background-color: aquamarine;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: brown;
+        }
+
+        .child,
+        .childcontainer,
+        .container {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                This is a child
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function rc() {
+            let r = Math.floor(Math.random() * 16777215);
+            return "#" + r.toString(16);
+        }
+
+        let a=setTimeout(()=>{
+            document.querySelector(".childcontainer").style.background = rc()
+        },5000)//It just performs the function once after the specified time here after 5000ms-5s when the page is refreshed or opened it doesnt repeat
+
+        //similar to the setInterval if you want to stop the timeout function before it executed use clearTimeout(a) or (1)
+
+        
+    </script>
+</body>
+
+</html>

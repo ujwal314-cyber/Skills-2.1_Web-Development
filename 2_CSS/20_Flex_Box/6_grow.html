@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gap</title>
+    <style>
+        .container{
+            height: 80vh;
+            margin: 20px;
+            border: 2px solid darkred;
+            display: flex;
+        }
+
+        .item{
+            text-align: center;
+            align-content: center;
+            height: 40px;
+            width: 55px;
+            border: 2px solid;
+            background-color: aquamarine;
+            margin: 2px;
+            
+        }
+
+        .g{
+            flex-grow: 1;/*The item will grow such that the line in which it is there fits the container if already the line reaches or exceeds the container and the items in the line are already conjusted then it wont grow
+            
+            > Value given doesnt affect */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item g"></div>
+        <div class="items1"></div>
+        <div class="item"></div>
+        <div class="item sh"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <!-- <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div> -->
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+nav ,ul{
+    display: flex;
+}
+
+li{
+    list-style: none;
+}
+
+ul{
+    gap: 20px;
+}
+
+nav{
+    margin: 20px;
+    background-color: rgba(91, 91, 91, 0.181);
+    padding: 20px;
+    border-radius: 10px;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child {
+            padding: 34px;
+            background-color: aliceblue;
+        }
+
+        .childcontainer {
+            padding: 20px;
+            background-color: aquamarine;
+        }
+
+        .container {
+            padding: 20px;
+            background-color: brown;
+        }
+
+        .child,
+        .childcontainer,
+        .container {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="childcontainer">
+            <div class="child">
+                This is a child
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function rc() {
+            let r = Math.floor(Math.random() * 16777215);
+            return "#" + r.toString(16);
+        }
+
+        let a=setInterval(()=>{
+            document.querySelector(".childcontainer").style.background = rc()
+        },500)//repeats the mentioned function after every 500ms
+
+        console.log(a)//the setInterval will return a value which is stored in 'a' if clearInterval(a) is written in the console then the interval function will stop repeating
+
+        // clearInterval(a)
+        //or clearInterval(1) will also do the same thing as 1 is only return by the setaINterval
+
+        
+    </script>
+</body>
+
+</html>

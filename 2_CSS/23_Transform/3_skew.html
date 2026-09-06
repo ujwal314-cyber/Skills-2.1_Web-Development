@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container{
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            border: 3px solid brown;
+        }
+        
+        .box{
+            margin: 10px;
+            border: 3px solid;
+            background-color: aquamarine;
+            height: 100px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* transform: skew(20deg);Is stretched */
+
+            transform: skewY(45deg);
+
+            /*But you cant skew in z axis*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>

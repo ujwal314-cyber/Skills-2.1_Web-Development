@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+        /*In flex boxes the items are not layed from left to right instead they are alligned in the flex direction which can be changed*/
+        .container{
+            height: 80vh;
+            margin: 20px;
+            border: 2px solid darkred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* flex-direction: column;aligns the items in column wise */
+
+            /* flex-direction: column-reverse;  aligns the items in column wise but in reverse order*/
+
+            /*Similarly there is row reverse*/
+
+            /*In a flex box always the contents are aligned across the main axis and on the axis on which they arent alligned is called the cross axis
+            
+            > so by default row is your main axis and column is your cross axis.
+            
+            > But when you specify flex-direction as column then your column becomes your main axis and row becomes your cross axis
+            
+            *> Justify content aligns on the main axis like if you specify justify-contents: start then it will align it on the start of the main axis*/
+        }
+
+        .item{
+            text-align: center;
+            align-content: center;
+            height: 40px;
+            width: 40px;
+            border: 2px solid;
+            background-color: aquamarine;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
